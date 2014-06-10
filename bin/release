@@ -8,8 +8,6 @@ cat <<EOF
 config_vars:
   PATH: .jdk/bin:.sbt_home/bin:/usr/local/bin:/usr/bin:/bin
   JAVA_OPTS: -Xmx384m -Xss512k -XX:+UseCompressedOops
-addons:
-  heroku-postgresql:dev
 
 default_process_types:
   web:      java \$JAVA_OPTS -cp server/jetty-runner.jar:server -Djetty.port=\$PORT Main target/*.war 
