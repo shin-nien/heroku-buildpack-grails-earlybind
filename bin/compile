@@ -14,7 +14,7 @@ CACHE_DIR=$2
 # source in common functions
 . $BIN_DIR/common.sh
 
-curl --silent --location https://www.dropbox.com/s/glbr8z8u4u8thr7/jvm-buildpack-common.tar.gz | tar xz
+curl --silent --location http://heroku.endource.s3.amazonaws.com/jvm-buildpack-common.tar.gz | tar xz
 . bin/java
 
 GRAILS_DIR=".grails"
